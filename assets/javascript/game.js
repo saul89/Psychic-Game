@@ -24,7 +24,7 @@ function saveKey(e){
                 gLeft = 9;
                 document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + gLeft;
                 computer = letters[Math.floor(Math.random() * letters.length)];
-            } else{
+            } else if (!gMade.includes(user)){
                 gMade.push(user);
                 document.getElementById("guessesMade").innerHTML = "Your Guesses so far: " + gMade;
                 gLeft--;
